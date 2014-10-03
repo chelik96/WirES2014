@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "H:/Projects/EEE8004/BIST/BIST_isim_beh.exe" -prj "H:/Projects/EEE8004/BIST/BIST_beh.prj" "work.BIST" 

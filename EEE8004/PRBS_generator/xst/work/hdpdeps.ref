@@ -1,0 +1,8 @@
+V3 3
+FL //tower5/home29/b3062393/Projects/EEE8004/PRBS_generator/PBRS_generator.vhd 2013/11/25.10:37:05 P.68d
+EN work/PBRS_generator 1385376359 \
+      FL //tower5/home29/b3062393/Projects/EEE8004/PRBS_generator/PBRS_generator.vhd \
+      PB ieee/std_logic_1164 1370735607
+AR work/PBRS_generator/Behavioral 1385376360 \
+      FL //tower5/home29/b3062393/Projects/EEE8004/PRBS_generator/PBRS_generator.vhd \
+      EN work/PBRS_generator 1385376359

@@ -1,0 +1,71 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml SIGNATURE.twx SIGNATURE.ncd -o SIGNATURE.twr SIGNATURE.pcf
+
+Design file:              SIGNATURE.ncd
+Physical constraint file: SIGNATURE.pcf
+Device,package,speed:     xc3s200,ft256,-4 (PRODUCTION 1.39 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+INPUT<0>       |OUTPUT<1>      |    8.195|
+INPUT<0>       |OUTPUT<2>      |    8.164|
+INPUT<0>       |OUTPUT<3>      |    7.559|
+INPUT<1>       |OUTPUT<0>      |    7.521|
+INPUT<1>       |OUTPUT<1>      |    8.200|
+INPUT<2>       |OUTPUT<0>      |    7.769|
+INPUT<2>       |OUTPUT<1>      |    8.087|
+INPUT<2>       |OUTPUT<2>      |    7.980|
+INPUT<3>       |OUTPUT<0>      |    7.759|
+INPUT<3>       |OUTPUT<1>      |    8.005|
+INPUT<3>       |OUTPUT<2>      |    7.968|
+INPUT<3>       |OUTPUT<3>      |    7.706|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Nov 18 10:52:58 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 118 MB
+
+
+

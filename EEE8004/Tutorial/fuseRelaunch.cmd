@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "H:/Projects/EEE8004/Tutorial/counter_tbv_isim_beh.exe" -prj "H:/Projects/EEE8004/Tutorial/counter_tbv_beh.prj" "work.counter_tbv" 

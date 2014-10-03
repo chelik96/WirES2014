@@ -1,0 +1,8 @@
+AR alu behavioral //tower5/home29/b3062393/Projects/EEE8004/BIST/ALU.vhdl sub00/vhpl04 1385981820
+AR pbrs_generator behavioral //tower5/home29/b3062393/Projects/EEE8004/BIST/PBRS_generator.vhd sub00/vhpl02 1385981818
+AR bist structural //tower5/home29/b3062393/Projects/EEE8004/BIST/BIST.vhd sub00/vhpl07 1385981824
+EN bist NULL //tower5/home29/b3062393/Projects/EEE8004/BIST/BIST.vhd sub00/vhpl00 1385981823
+EN pbrs_generator NULL //tower5/home29/b3062393/Projects/EEE8004/BIST/PBRS_generator.vhd sub00/vhpl01 1385981817
+EN signature NULL //tower5/home29/b3062393/Projects/EEE8004/BIST/SIGNATURE.vhdl sub00/vhpl05 1385981821
+AR signature behavioral //tower5/home29/b3062393/Projects/EEE8004/BIST/SIGNATURE.vhdl sub00/vhpl06 1385981822
+EN alu NULL //tower5/home29/b3062393/Projects/EEE8004/BIST/ALU.vhdl sub00/vhpl03 1385981819

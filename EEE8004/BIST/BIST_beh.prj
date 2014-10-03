@@ -1,0 +1,4 @@
+vhdl work "SIGNATURE.vhdl"
+vhdl work "PBRS_generator.vhd"
+vhdl work "ALU.vhdl"
+vhdl work "BIST.vhd"

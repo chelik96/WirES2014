@@ -1,0 +1,85 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 184 248)
+	(text "fir_filter" (rect 5 0 43 12)(font "Arial" ))
+	(text "inst" (rect 8 168 25 180)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "ADCDAT[15..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "ADCDAT[15..0]" (rect 24 24 100 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "DACrdy" (rect 0 0 40 12)(font "Arial" ))
+		(text "DACrdy" (rect 24 112 64 124)(font "Arial" ))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "ADCstb" (rect 0 0 38 12)(font "Arial" ))
+		(text "ADCstb" (rect 24 40 62 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "CLOCK_50" (rect 0 0 55 12)(font "Arial" ))
+		(text "CLOCK_50" (rect 24 136 79 148)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "RST_N" (rect 0 0 35 12)(font "Arial" ))
+		(text "RST_N" (rect 24 152 59 164)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 88)
+		(output)
+		(text "DACDAT[15..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "DACDAT[15..0]" (rect 24 80 100 92)(font "Arial" ))
+		(line (pt 16 88)(pt 0 88)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(output)
+		(text "ADCrdy" (rect 0 0 40 12)(font "Arial" ))
+		(text "ADCrdy" (rect 24 56 64 68)(font "Arial" ))
+		(line (pt 16 64)(pt 0 64))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "DACstb" (rect 0 0 38 12)(font "Arial" ))
+		(text "DACstb" (rect 24 96 62 108)(font "Arial" ))
+		(line (pt 16 104)(pt 0 104))
+	)
+	(drawing
+		(rectangle (rect 16 16 104 168))
+	)
+)

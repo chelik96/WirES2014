@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "H:/Projects/EEE8004/SIGNATURE/SIGNATURE.xst" -ofn "H:/Projects/EEE8004/SIGNATURE/SIGNATURE.syr" 
+xst -intstyle ise -ifn "H:/Projects/EEE8004/SIGNATURE/SIGNATURE.xst" -ofn "H:/Projects/EEE8004/SIGNATURE/SIGNATURE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 SIGNATURE.ngc SIGNATURE.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o SIGNATURE_map.ncd SIGNATURE.ngd SIGNATURE.pcf 
+par -w -intstyle ise -ol high -t 1 SIGNATURE_map.ncd SIGNATURE.ncd SIGNATURE.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml SIGNATURE.twx SIGNATURE.ncd -o SIGNATURE.twr SIGNATURE.pcf 

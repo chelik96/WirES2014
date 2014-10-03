@@ -1,0 +1,29 @@
+Gain| = Output Range / (Vin.max - Vin.min)
+
+output range = 0v - 2.2v
+
+
+voltage at 50 degrees C = 3.3 * 1.8k/10k+1.8k
+voltage at  0 degrees C = 3.3 * 15k/10k + 15k
+
+gain = 2.2 / 0.5 - 2
+
+gain = 2.2 / -1.5
+
+gain = 1.46666 ==== 1.5ish
+
+
+Gain = Rg / Rin 
+1.466 = 10k / Rin
+
+Rin = 7.1k
+
+Voff = Vin.max * ( |Gain| / ( |Gain| + 1 ))
+
+Voff = 2v * (1.4666 / 1.466 + 1)
+     = 1.2v
+	 
+Voff = (Rbot / (Rtop + Rbot)) * Vref
+
+1.2v = (Rbot / (10k + Rbot)) * 3.3v
+Rbot = 5.6-7k

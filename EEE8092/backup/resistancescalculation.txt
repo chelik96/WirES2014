@@ -1,0 +1,37 @@
+Working out resistors for scaling op amp circuit
+using http://electrotap.com/2004/11/01/op-amps-part-1-scaling-sensor-voltages/ 
+
+with a 5k voltage dividing resistor and max/min temperatures of 50c and 0c:
+vin.max @  0C = 3.3v *  18k / (18k  + 5k)
+              = 2.6v
+vin.min @ 50C = 3.3v * 1.8k / (1.8K + 5k)
+              = 0.8v
+
+gain = output range / vin.max - vin.min
+     = 3.3v / (2.6v - 0.8v)
+	 = 3.3 / 1.8v
+	 = 1.8
+
+gain = Rg / Rin
+1.8  = 10k / Rin
+Rin = 5.5k
+
+Voff = Vin.max * (gain / gain +1)
+Voff = 2.6 * (1.8 / 2.8)
+Voff = 1.7v
+
+Voff = RBot / (Rtop + Rbot) * Vref
+1.7  = RBot / (10k + RBot) * 3.3
+
+0.5 * (10K + RBot) = RBot
+5K + 1/2Rbot = Rbot
+RBOt = 5k
+
+therefore we need
+Rin  = 5.5k
+Rg   = 10k
+Rtop = 10k
+Rbot = 5k
+
+
+	 

@@ -1,0 +1,88 @@
+Where to find addresses of registers?
+
+file: ex.h
+
+------------------------------
+How to light an LED?
+
+int a=1; // cintrolling LED[0]
+*LEDS_P = a;
+
+or just
+
+*LEDS_P = 1;
+
+or if you want to preserve the other LEDs use
+
+*LED_P |= 1;  // on
+*LED_P &= ~1; // off
+
+-----------------------------
+How to write an interrupt handler?
+
+void __attribute__ ((naked)) irq ()	// stack not used - FSM model
+{}
+
+or
+
+void __attribute__((interrupt("IRQ"))) irq() // traditional return is possible
+{}
+
+------------------------------
+How to write a software exception handler?
+
+void __attribute__ ((naked)) swi () // no return - FSM model
+{}
+
+------------------------------
+How to call the software exception?
+
+void __attribute__ ((naked)) task (struct task_inst *d)
+{...
+
+  asm ("swi 0"); // SW exception to get back form User to Supervisor mode
+}
+------------------------------
+What are ARM modes, e.g. supervisor, IRQ, user, SWI, etc.?
+Read ARM documents!!!
+
+------------------------------
+How to specify tasks in your programme?
+
+This is my example, which is compact, but you may have your own preferences...
+
+struct task_inst
+{
+  void (*func) ();	// function pointer
+  int run_phase, n, pwm_period, flash_half_period;	// parameters, can be separated for protection
+  int flash_cnt, pwm_cnt, brightness, updown;	// static data
+};
+
+void task (struct task_inst *);
+struct task_inst task_list[num_of_tasks] = {
+  {task, 3, 0, 20, 500, 0, 0, 0, 0},
+  {task, 3, 1, 20, 550, 0, 0, 0, 0},
+  {task, 3, 2, 20, 600, 0, 0, 0, 0},
+  {task, 3, 3, 20, 650, 0, 0, 0, 0},
+  {task, 1, 4, 10, 350, 0, 0, 0, 0},
+  {task, 1, 5, 10, 375, 0, 0, 0, 0},
+  {task, 2, 6, 10, 400, 0, 0, 0, 0},
+  {task, 2, 7, 10, 425, 0, 0, 0, 0}
+};
+
+void __attribute__ ((naked)) task (struct task_inst *d)
+{...}
+
+----------------------------------
+How to implement the Sleep state?
+The C compiler may eliminate "empty" loops if invoked with any optimisation options.
+Use the following function to eliminate this possibility.
+There are other more complicated options as well...
+
+void __attribute__ ((naked)) sleep_state()
+{
+  asm ("sleep_forever: b sleep_forever");	// sleep, "asm" prevents loop elimination
+}
+
+
+

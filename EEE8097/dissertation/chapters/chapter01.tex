@@ -1,0 +1,80 @@
+% Chapter 1
+
+\chapter{Introduction} % Chapter title
+
+% For referencing the chapter elsewhere, use \autoref{ch:introduction} 
+\label{ch:introduction} 
+
+%-------------------------------------------------------------------------------
+
+\Glspl{puf} are a relatively recent concept under much research.
+By harnessing physical properties that are hard to simulate or copy, yet are
+easy to sample from as a data stream source of for cryptographic key information,
+an identification and authentication package can be constructed for any device
+that contains or incorporates that physical property.
+This is analogous to a biometric such as a fingerprint or iris, but one which
+can be found in embedded electronic devices rather than human biology.
+
+In this dissertation I will discuss my findings into the implementation of
+a \gls{puf} system that would be of practical use if incorporated into a small
+electronic embedded networked device for providing the means to authenticate that
+device without requiring passwords or any other type of user intervention.
+A naive setup for this would involve the extraction of data from a physical device
+with the properties of a \gls{puf} in response to a challenge specifiying the
+parameters used for extraction, all data sent in plaintext via a standard network protocol
+
+This first step provides a simply \gls{crp} by which the device can provide
+identity information, but as has been found in the course of the project,
+this is not enough for a complete authentication solution for two reasons.
+Firstly both the  challenge and the reponse are in plaintext and thus
+completely open to an
+adversary's use of attacks such as the' replay attack or the \gls{mitm} attack,
+hence any practical system requires some use of modern cryptographic methods to
+secure the data.
+Secondly the nature of \glspl{puf} means they provide their
+data somewhat unrealiably, this must be allowed for and mitigated.
+The concept of fuzzy extraction shall therefore be introduced and explored as
+a means to provide both of these necessary additions to the 
+\gls{puf}-based authentication system by utilising the concepts of \glspl{ecc} and
+cryptographic hashes.
+
+In this scenario it is necessary that the device with the PUF authenticates
+itself over a network to some central authenticator which issues the challenges 
+to the device to prove its identity.
+The networked device must then respond to the challenge correctly otherwise all
+or part of the networking medium that the device requires is in some way
+withheld by the authenticator.
+By this means network security can be achieved without any human intervention.
+This would surely be a important and neccesary
+step in facilitating the likely future integration of innumerable inexpensive
+embeddded systems into wireless home and office networks.
+This is because, without burdening the user with any increased installation 
+inconvience adaquate security provision can be provided.
+The use of \glspl{puf} in this provision by the estabilshment of a network
+security protocol was also investigated.
+
+In the next chapter (chapter 2) I will report my background research into the
+subjects of \glspl{puf} and the use of \gls{sram} as a \gls{puf} source. Then
+the research on fuzzy extraction with focus on the usage of a class of \gls{ecc}
+called BCH codes and a family of cryptographic hash functions called SHA-2. Finally
+research into techniques to add \gls{puf}-based security provision into the
+Ethernet protocol will be discussed.
+
+In the third chapter this initial research is built upon with an explanation of
+the design of systems and simulations that were built to analyse and experiment
+with the concepts gleaned from the intital research. These designs broadly fit
+into three areas of design effort.
+\begin{itemize}
+\item An implementation of a RS-232 based \gls{crp} system for data extraction from a
+physical SRAM device.
+\item The simulation of a complete fuzzy extractor system in \matlab.
+\item The design of a modified Ethernet protocol for \gls{puf} authentication.
+\end{itemize}
+
+In the forth chapter the results of the practical implementations of the designs
+are presented, followed in the fifth chapter by a discussion of the implications
+of this study.
+
+
+
+

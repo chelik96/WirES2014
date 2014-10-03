@@ -1,0 +1,2 @@
+write_sg .g -bin > test.sg
+draw_astg -g -bin > test.ps

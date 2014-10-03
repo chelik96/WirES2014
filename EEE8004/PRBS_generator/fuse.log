@@ -1,0 +1,21 @@
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o H:/Projects/EEE8004/PRBS_generator/PRBS_tbv_isim_beh.exe -prj H:/Projects/EEE8004/PRBS_generator/PRBS_tbv_beh.prj work.PRBS_tbv 
+ISim P.68d (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "H:/Projects/EEE8004/PRBS_generator/PBRS_generator.vhd" into library work
+Parsing VHDL file "H:/Projects/EEE8004/PRBS_generator/PRBS_tbv.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 121664 KB
+Fuse CPU Usage: 187 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity PBRS_generator [pbrs_generator_default]
+Compiling architecture behavior of entity prbs_tbv
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable H:/Projects/EEE8004/PRBS_generator/PRBS_tbv_isim_beh.exe
+Fuse Memory Usage: 150448 KB
+Fuse CPU Usage: 327 ms

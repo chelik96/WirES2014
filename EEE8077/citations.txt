@@ -1,0 +1,8 @@
+Reference Books we have used are:
+1.	Wireless And Personal Communications Systems By Vijay K. Garg and Joseph E. Wilkes.
+2.	Wireless Communications By Andrea Goldsmith.
+3.	Introduction to Analog and Digital Communication by Simon Haykin ,Michael Moher.
+4.	OFDM for Wireless Communication Systems By Ramjee Prasad.
+5.	Digital Communications By John G. Proakis.
+6.	Communications Systems (4th Edition) By A. Bruce Carlson, Paul B. Crilly and Janet Rutledge.
+7.	Modern Communication Systems by using MATLAB by John G. Proakis , Masoud Salehi and Gerhard Bauch

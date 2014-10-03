@@ -1,0 +1,168 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 328 432)
+	(text "stereo_s2p_adaptor" (rect 8 0 104 12)(font "Arial" ))
+	(text "inst" (rect 8 352 25 364)(font "Arial" ))
+	(port
+		(pt 264 88)
+		(input)
+		(text "L_DACDAT[msb_audio..0]" (rect -72 32 57 44)(font "Arial" ))
+		(text "L_DACDAT[msb_audio..0]" (rect 128 80 257 92)(font "Arial" ))
+		(line (pt 248 88)(pt 264 88)(line_width 3))
+	)
+	(port
+		(pt 264 64)
+		(input)
+		(text "L_ADCrdy" (rect -72 32 -21 44)(font "Arial" ))
+		(text "L_ADCrdy" (rect 200 56 251 68)(font "Arial" ))
+		(line (pt 248 64)(pt 264 64))
+	)
+	(port
+		(pt 264 104)
+		(input)
+		(text "L_DACstb" (rect -72 32 -22 44)(font "Arial" ))
+		(text "L_DACstb" (rect 200 96 250 108)(font "Arial" ))
+		(line (pt 248 104)(pt 264 104))
+	)
+	(port
+		(pt 264 272)
+		(input)
+		(text "R_DACDAT[msb_audio..0]" (rect -72 32 60 44)(font "Arial" ))
+		(text "R_DACDAT[msb_audio..0]" (rect 128 264 260 276)(font "Arial" ))
+		(line (pt 248 272)(pt 264 272)(line_width 3))
+	)
+	(port
+		(pt 264 248)
+		(input)
+		(text "R_ADCrdy" (rect -72 32 -18 44)(font "Arial" ))
+		(text "R_ADCrdy" (rect 185 240 239 252)(font "Arial" ))
+		(line (pt 248 248)(pt 264 248))
+	)
+	(port
+		(pt 264 288)
+		(input)
+		(text "R_DACstb" (rect -72 32 -19 44)(font "Arial" ))
+		(text "R_DACstb" (rect 186 280 239 292)(font "Arial" ))
+		(line (pt 248 288)(pt 264 288))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "AUD_ADCDAT" (rect 0 32 74 44)(font "Arial" ))
+		(text "AUD_ADCDAT" (rect 21 219 95 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "AUD_ADCLRCK" (rect 0 32 82 44)(font "Arial" ))
+		(text "AUD_ADCLRCK" (rect 21 235 103 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "AUD_DACLRCK" (rect 0 32 82 44)(font "Arial" ))
+		(text "AUD_DACLRCK" (rect 24 280 106 292)(font "Arial" ))
+		(line (pt 0 288)(pt 16 288))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "AUD_BCLK" (rect 0 32 57 44)(font "Arial" ))
+		(text "AUD_BCLK" (rect 21 187 78 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 264 328)
+		(input)
+		(text "CLOCK_50" (rect -72 32 -17 44)(font "Arial" ))
+		(text "CLOCK_50" (rect 192 320 247 332)(font "Arial" ))
+		(line (pt 248 328)(pt 264 328))
+	)
+	(port
+		(pt 264 344)
+		(input)
+		(text "RST_N" (rect -72 32 -37 44)(font "Arial" ))
+		(text "RST_N" (rect 208 336 243 348)(font "Arial" ))
+		(line (pt 248 344)(pt 264 344))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "L_ADCDAT[msb_audio..0]" (rect -72 32 57 44)(font "Arial" ))
+		(text "L_ADCDAT[msb_audio..0]" (rect 134 27 263 39)(font "Arial" ))
+		(line (pt 264 32)(pt 248 32)(line_width 3))
+	)
+	(port
+		(pt 264 120)
+		(output)
+		(text "L_DACrdy" (rect -72 32 -21 44)(font "Arial" ))
+		(text "L_DACrdy" (rect 200 112 251 124)(font "Arial" ))
+		(line (pt 264 120)(pt 248 120))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "L_ADCstb" (rect -72 32 -22 44)(font "Arial" ))
+		(text "L_ADCstb" (rect 201 43 251 55)(font "Arial" ))
+		(line (pt 264 48)(pt 248 48))
+	)
+	(port
+		(pt 264 216)
+		(output)
+		(text "R_ADCDAT[msb_audio..0]" (rect -72 32 60 44)(font "Arial" ))
+		(text "R_ADCDAT[msb_audio..0]" (rect 128 208 260 220)(font "Arial" ))
+		(line (pt 264 216)(pt 248 216)(line_width 3))
+	)
+	(port
+		(pt 264 304)
+		(output)
+		(text "R_DACrdy" (rect -72 32 -18 44)(font "Arial" ))
+		(text "R_DACrdy" (rect 185 296 239 308)(font "Arial" ))
+		(line (pt 264 304)(pt 248 304))
+	)
+	(port
+		(pt 264 232)
+		(output)
+		(text "R_ADCstb" (rect -72 32 -19 44)(font "Arial" ))
+		(text "R_ADCstb" (rect 186 224 239 236)(font "Arial" ))
+		(line (pt 264 232)(pt 248 232))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "AUD_DACDAT" (rect 0 32 74 44)(font "Arial" ))
+		(text "AUD_DACDAT" (rect 24 264 98 276)(font "Arial" ))
+		(line (pt 16 272)(pt 0 272))
+	)
+	(parameter
+		"MSB_Audio"
+		"15"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 8 16 256 352))
+	)
+	(annotation_block (parameter)(rect 328 32 520 64))
+)

@@ -1,0 +1,60 @@
+Calculating Ethernet Packets Involved in Authentication via EAP-PUF
+
+Pre-assigned values for demo:
+-----------------------------
+Supplicant MAC address   : 00005E005301 (reserved for documentation purposes)
+Authenticator MAC Address: 00005E0053FF (reserved for documentation purposes)
+
+EAPoL PAE Broadcast MAC  : 0180C2000003 (reserved group-multicast MAC address
+                                         used for contacting 802.1x PAEs)
+EAP type of EAP-PUF      : B0           (in unassigned types list decimal=192)
+
+Ethertype for 802.1x     : 888E
+EAP Identifier           : 55           (Authenticator generates this at start)
+
+Sizes are constant for the protocol (also EAP and EAPoL lengths always same)
+--------------------------------------------------------------------------------
+- Start and Logoff  -  0 Bytes - 0000 -(No EAP content so 0 Bytes)
+- Identity Request  -  6 Bytes - 0006 -(4 Byte header + Identity type Byte +
+                                        EAP-PUF type Byte)
+- Identity Response - 11 Bytes - 000B -(4 Byte header + Identity type Byte +
+                                        6 Byte MAC of supplicant)
+- PUF  Request      - 53 Bytes - 0035 -(4 Byte header + PUF type Byte +
+                                       16 Byte Challenge + 32 Bytes helper data)
+- PUF  Response     - 37 Bytes - 0025 -(4 Byte header + PUF type Byte +
+                                       32 Byte SHA-256 Response)
+- EAP Success       -  4 Bytes - 0004 -(4 Byte Header only)
+
+
+Message Sequence
+
+EAPoL Start Packet (From Supplicant)
+
+0180C200000300005E005301888E02010000 + 4 Byte CRC
+
+EAP Identity Request Packet (From Authenticator)
+
+00005E00530100005E0053FF888E020000060155000601B0 + 4 Byte CRC
+
+EAP Identity Response Packet (From Supplicant)
+
+00005E0053FF00005E005301888E0200000B0255000B0100005E005301 + 4 Byte CRC
+
+EAP EAP-PUF Request Packet (From Authenticator)
+
+00005E00530100005E0053FF888E0200003501550035B0 + Challenge(16 Bytes)
+                                               + Helper Data(32 Bytes)
+                                               + 4 Byte CRC
+
+EAP EAP_PUF Response Packet (From Supplicant)
+
+00005E0053FF00005E005301888E0200002502550025B0 + Response(32 Bytes)
+                                               + 4 Byte CRC
+
+EAP Success Packet (From Authenticator)
+
+00005E00530100005E0053FF888E0200000403550004 + 4 Byte CRC
+
+EAPoL Logoff Packet (From Supplicant)
+
+0180C200000300005E005301888E02020000 + 4 Byte CRC

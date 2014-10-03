@@ -1,0 +1,9 @@
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+funclist
+l.obj
+nbproject\Makefile-genesis.properties

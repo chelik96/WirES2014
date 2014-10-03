@@ -1,0 +1,2 @@
+vhdl work "PBRS_generator.vhd"
+vhdl work "PRBS_tbv.vhd"

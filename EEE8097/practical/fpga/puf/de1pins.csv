@@ -1,0 +1,90 @@
+From,To,Assignment Name,Value,Enabled
+,KEY[0],Location,PIN_R22,Yes
+,KEY[1],Location,PIN_R21,Yes
+,KEY[2],Location,PIN_T22,Yes
+,KEY[3],Location,PIN_T21,Yes
+,LEDR[0],Location,PIN_R20,Yes
+,LEDR[1],Location,PIN_R19,Yes
+,LEDR[2],Location,PIN_U19,Yes
+,LEDR[3],Location,PIN_Y19,Yes
+,LEDR[4],Location,PIN_T18,Yes
+,LEDR[5],Location,PIN_V19,Yes
+,LEDR[6],Location,PIN_Y18,Yes
+,LEDR[7],Location,PIN_U18,Yes
+,LEDR[8],Location,PIN_R18,Yes
+,LEDR[9],Location,PIN_R17,Yes
+,LEDG[0],Location,PIN_U22,Yes
+,LEDG[1],Location,PIN_U21,Yes
+,LEDG[2],Location,PIN_V22,Yes
+,LEDG[3],Location,PIN_V21,Yes
+,LEDG[4],Location,PIN_W22,Yes
+,LEDG[5],Location,PIN_W21,Yes
+,LEDG[6],Location,PIN_Y22,Yes
+,LEDG[7],Location,PIN_Y21,Yes
+,KEY[0],I/O Standard,LVTTL,Yes
+,KEY[1],I/O Standard,LVTTL,Yes
+,KEY[2],I/O Standard,LVTTL,Yes
+,KEY[3],I/O Standard,LVTTL,Yes
+,LEDR[0],I/O Standard,LVTTL,Yes
+,LEDR[1],I/O Standard,LVTTL,Yes
+,LEDR[2],I/O Standard,LVTTL,Yes
+,LEDR[3],I/O Standard,LVTTL,Yes
+,LEDR[4],I/O Standard,LVTTL,Yes
+,LEDR[5],I/O Standard,LVTTL,Yes
+,LEDR[6],I/O Standard,LVTTL,Yes
+,LEDR[7],I/O Standard,LVTTL,Yes
+,LEDR[8],I/O Standard,LVTTL,Yes
+,LEDR[9],I/O Standard,LVTTL,Yes
+,LEDG[0],I/O Standard,LVTTL,Yes
+,LEDG[1],I/O Standard,LVTTL,Yes
+,LEDG[2],I/O Standard,LVTTL,Yes
+,LEDG[3],I/O Standard,LVTTL,Yes
+,LEDG[4],I/O Standard,LVTTL,Yes
+,LEDG[5],I/O Standard,LVTTL,Yes
+,LEDG[6],I/O Standard,LVTTL,Yes
+,LEDG[7],I/O Standard,LVTTL,Yes
+,CLOCK_50,Location,PIN_L1,Yes
+,CLOCK_50,I/O Standard,LVTTL,Yes
+,UART_RXD,Location,PIN_F14,Yes
+,UART_TXD,Location,PIN_G12,Yes
+,UART_RXD,I/O Standard,LVTTL,Yes
+,UART_TXD,I/O Standard,LVTTL,Yes
+,SRAM_ADDR[0],Location,PIN_AA3,Yes
+,SRAM_ADDR[1],Location,PIN_AB3,Yes
+,SRAM_ADDR[2],Location,PIN_AA4,Yes
+,SRAM_ADDR[3],Location,PIN_AB4,Yes
+,SRAM_ADDR[4],Location,PIN_AA5,Yes
+,SRAM_ADDR[5],Location,PIN_AB10,Yes
+,SRAM_ADDR[6],Location,PIN_AA11,Yes
+,SRAM_ADDR[7],Location,PIN_AB11,Yes
+,SRAM_ADDR[8],Location,PIN_V11,Yes
+,SRAM_ADDR[9],Location,PIN_W11,Yes
+,SRAM_ADDR[10],Location,PIN_R11,Yes
+,SRAM_ADDR[11],Location,PIN_T11,Yes
+,SRAM_ADDR[12],Location,PIN_Y10,Yes
+,SRAM_ADDR[13],Location,PIN_U10,Yes
+,SRAM_ADDR[14],Location,PIN_R10,Yes
+,SRAM_ADDR[15],Location,PIN_T7,Yes
+,SRAM_ADDR[16],Location,PIN_Y6,Yes
+,SRAM_ADDR[17],Location,PIN_Y5,Yes
+,SRAM_CE_N,Location,PIN_AB5,Yes
+,SRAM_DQ[0],Location,PIN_AA6,Yes
+,SRAM_DQ[1],Location,PIN_AB6,Yes
+,SRAM_DQ[2],Location,PIN_AA7,Yes
+,SRAM_DQ[3],Location,PIN_AB7,Yes
+,SRAM_DQ[4],Location,PIN_AA8,Yes
+,SRAM_DQ[5],Location,PIN_AB8,Yes
+,SRAM_DQ[6],Location,PIN_AA9,Yes
+,SRAM_DQ[7],Location,PIN_AB9,Yes
+,SRAM_DQ[8],Location,PIN_Y9,Yes
+,SRAM_DQ[9],Location,PIN_W9,Yes
+,SRAM_DQ[10],Location,PIN_V9,Yes
+,SRAM_DQ[11],Location,PIN_U9,Yes
+,SRAM_DQ[12],Location,PIN_R9,Yes
+,SRAM_DQ[13],Location,PIN_W8,Yes
+,SRAM_DQ[14],Location,PIN_V8,Yes
+,SRAM_DQ[15],Location,PIN_U8,Yes
+,SRAM_LB_N,Location,PIN_Y7,Yes
+,SRAM_OE_N,Location,PIN_T8,Yes
+,SRAM_UB_N,Location,PIN_W7,Yes
+,SRAM_WE_N,Location,PIN_AA10,Yes

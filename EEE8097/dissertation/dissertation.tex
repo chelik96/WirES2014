@@ -1,0 +1,58 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[bookmarks]{hyperref}
+\usepackage{verbatim}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[acronym,toc,nonumberlist]{glossaries}
+\usepackage[numbered,framed,final]{matlab-prettifier}
+\usepackage{setspace}
+\usepackage[lofdepth,lotdepth]{subfig}
+
+
+\onehalfspacing
+
+% Generate the glossary
+\makeglossaries
+\input{meta/glossary}
+
+
+
+% Run texcount on tex-file and write results to a sum-file
+\immediate\write18{texcount -sum -1 -inc \jobname.tex -out=\jobname.sum}
+% Define macro \wordcount for including the counts
+\newcommand\wordcount{\input{\jobname.sum}}
+
+% Macro for quick ways to enter common text
+\newcommand{\matlab}{MATLAB\textsuperscript{\copyright}\ }
+\newcommand{\inlinecode}{\texttt}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\title{Physically Unclonable Functions for Networked Device Authentication}
+\date{September, 2014}
+\author{Michael Walker}
+
+\begin{document}
+
+% Front Matter
+\pagenumbering{roman}
+\input{meta/title}
+\input{meta/declaration}
+\input{meta/summary}
+\input{meta/contents}
+
+% Main Content
+\pagenumbering{arabic}
+\input{chapters/chapter01}
+\input{chapters/chapter02}
+\input{chapters/chapter03}
+\input{chapters/chapter04}
+\input{chapters/chapter05}
+\input{chapters/chapter06}
+\input{chapters/appendex}
+
+\end{document}

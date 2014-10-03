@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "H:/Projects/EEE8004/BIST/BIST.xst" -ofn "H:/Projects/EEE8004/BIST/BIST.syr" 
+xst -intstyle ise -ifn "H:/Projects/EEE8004/BIST/BIST.xst" -ofn "H:/Projects/EEE8004/BIST/BIST.syr" 
+xst -intstyle ise -ifn "H:/Projects/EEE8004/BIST/BIST.xst" -ofn "H:/Projects/EEE8004/BIST/BIST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 BIST.ngc BIST.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o BIST_map.ncd BIST.ngd BIST.pcf 
+xst -intstyle ise -ifn "H:/Projects/EEE8004/BIST/BIST.xst" -ofn "H:/Projects/EEE8004/BIST/BIST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 BIST.ngc BIST.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o BIST_map.ncd BIST.ngd BIST.pcf 
+xst -intstyle ise -ifn "H:/Projects/EEE8004/BIST/BIST.xst" -ofn "H:/Projects/EEE8004/BIST/BIST.syr" 
+xst -intstyle ise -ifn "H:/Projects/EEE8004/BIST/BIST.xst" -ofn "H:/Projects/EEE8004/BIST/BIST.syr" 
+xst -intstyle ise -ifn "H:/Projects/EEE8004/BIST/BIST.xst" -ofn "H:/Projects/EEE8004/BIST/BIST.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 BIST.ngc BIST.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o BIST_map.ncd BIST.ngd BIST.pcf 
+par -w -intstyle ise -ol high -t 1 BIST_map.ncd BIST.ncd BIST.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml BIST.twx BIST.ncd -o BIST.twr BIST.pcf 

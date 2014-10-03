@@ -1,0 +1,16 @@
+ex
+*.dmp
+*.o
+ex.s
+*.exe
+kmd
+Lecture Notes/Thumbs.db
+exbkup
+Thumbs.db
+Sample Code/cond1
+Sample Code/mutex1
+Sample Code/mutex_fair
+Sample Code/mutex_unfair
+Report/Realtime.Data
+Report/~$68Report.docx
+.DS_Store

@@ -1,0 +1,19 @@
+% Table of Contents - List of Tables/Figures/Listings and Acronyms
+
+%-------------------------------------------------------------------------------
+\setcounter{tocdepth}{2} % Depth of sections to include in the table of contents - currently up to subsections
+
+\setcounter{secnumdepth}{3} % Depth of sections to number in the text itself - currently up to subsubsections
+
+\tableofcontents 
+
+\clearpage
+
+\listoffigures
+
+\listoftables
+ 
+%Print the glossary
+\glsaddall
+\setglossarystyle{altlist}
+\printglossary[type=\acronymtype,title=List of Acronyms]
