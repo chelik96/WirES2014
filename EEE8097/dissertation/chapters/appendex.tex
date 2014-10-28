@@ -2,18 +2,73 @@
 
 %-------------------------------------------------------------------------------
 \appendix
-
 \chapter{Appendix}
 
-\section{Fuzzy Extractor Matlab Code}
+\section{SRAM-PUF Implementation in VHDL}
+\label{app:srampuf}
 
-\lstinputlisting[style=Matlab-editor]{../practical/matlab/fuzzy/fuzzytest.m}
+\subsection{puf.vhd - Top Level Design Entity}
+\lstset{tabsize=2}
+\lstinputlisting[style=Matlab-editor,language=VHDL]{../practical/fpga/puf/puf.vhd}
 
 \newpage
 
-\section{SHA-256 Matlab Implementation}
+\subsection{uart.vhd - Implementation of UART module}
+
+\lstinputlisting[style=Matlab-editor,language=VHDL]{../practical/fpga/puf/uart.vhd}
+
+\newpage
+
+\subsection{sram.vhd - Wrapper function for SRAM}
+
+\lstinputlisting[style=Matlab-editor,language=VHDL]{../practical/fpga/puf/sram.vhd}
+
+\newpage
+
+\section{Fuzzy Extractor implementation in Matlab}
+\label{app:fuzzy}
+
+\subsection{FuzzyGenerator.m - Implementation of Generation process of Fuzzy Extractor}
+
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/fuzzy/FuzzyGenerator.m}
+
+\newpage
+
+\subsection{FuzzyReproducer.m - Implementation of Reproduction process of Fuzzy Extractor}
+
+\lstinputlisting[style=Matlab-editor]{../practical/matlab//fuzzy/FuzzyReproducer.m}
+
+\newpage
+
+\section{EAP-PUF Protocol Simulation in Matlab}
+\label{app:eappuf}
+
+\subsection{GenerateRequest.m - Generates a full EAP-PUF Ethernet Packet}
+
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/ethernet/GenerateRequest.m}
+
+\subsection{ProcessRequest.m - Extracts Challenge from EAP-PUF Packet}
+
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/ethernet/ProcessRequest.m}
+
+\subsection{crc.m - Generates FCS of Ethernet packet}
+
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/ethernet/crc.m}
+
+
+\newpage
+
+\section{SHA-256 hash function implementation in Matlab}
+\label{app:sha256}
+
+\subsection{sha256.m - Main SHA-256 Matlab Implementation code}
 
 \lstinputlisting[style=Matlab-editor]{../practical/matlab/sha256/sha256.m}
+
+\newpage
+
+\subsection{Various files - SHA-256 Matlab Implementation Helper functions}
+
 \lstinputlisting[style=Matlab-editor]{../practical/matlab/sha256/padmessage.m}
 \lstinputlisting[style=Matlab-editor]{../practical/matlab/sha256/hexadd.m}
 \lstinputlisting[style=Matlab-editor]{../practical/matlab/sha256/t1.m}
@@ -25,15 +80,32 @@
 \lstinputlisting[style=Matlab-editor]{../practical/matlab/sha256/LittleSigma0.m}
 \lstinputlisting[style=Matlab-editor]{../practical/matlab/sha256/LittleSigma1.m}
 
+\newpage
 
-\section{Appendix III}
+\section{Full Project Demonstration code}
+\label{app:demo}
 
-Third Appendix, probably some source code...
+\subsection{pufdemo.m - Fuzzy Extractor Demonstration code}
 
-\section{Appendix IV}
+\lstinputlisting[style=Matlab-editor]{../demonstration/pufdemo.m}
 
-Fourth Appendix, probably some source code...
+\newpage
 
-\section{Appendix V}
+\subsection{FuzzySim.m - Fuzzy Extractor error correction testing}
 
-Fifth Appendix, probably some source code...
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/fuzzy/FuzzySim.m}
+
+\newpage
+
+\subsection{FuzzyLengthTest.m - Fuzzy Extractor length parameter testing}
+
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/fuzzy/FuzzyLengthTest.m}
+
+\newpage
+
+\subsection{challengegen.m - Generates random hexadecimal challenge string}
+
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/serial/challengegen.m}
+
+\subsection{Validator.m - Validates two Responses}
+\lstinputlisting[style=Matlab-editor]{../practical/matlab/ethernet/validator.m}

@@ -1,0 +1,14 @@
+0+7+0 (1/0/0/0) File: dissertation.tex
+333+0+0 (0/0/0/0) Included file: ./meta/glossary.tex
+0+0+0 (0/0/0/0) Included file: ./meta/title.tex
+41+1+0 (1/0/0/0) Included file: ./meta/declaration.tex
+111+1+0 (1/0/0/0) Included file: ./meta/summary.tex
+1+0+0 (0/0/0/0) Included file: ./meta/contents.tex
+895+1+0 (1/0/0/0) Included file: ./chapters/chapter01.tex
+4445+35+34 (13/1/0/0) Included file: ./chapters/chapter02.tex
+8307+80+84 (28/12/110/0) Included file: ./chapters/chapter03.tex
+911+11+5 (7/1/0/0) Included file: ./chapters/chapter04.tex
+751+13+0 (7/0/0/0) Included file: ./chapters/chapter05.tex
+3+0+0 (0/0/1/0) Included file: ./chapters/chapter06.tex
+102+119+0 (22/0/0/0) Included file: ./chapters/appendex.tex
+15900+268+123 (81/14/111/0) File(s) total: dissertation.tex

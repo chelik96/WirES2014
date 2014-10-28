@@ -8,7 +8,8 @@
 \usepackage[bookmarks]{hyperref}
 \usepackage{verbatim}
 \usepackage[nottoc,numbib]{tocbibind}
-\usepackage[acronym,toc,nonumberlist]{glossaries}
+\usepackage{datatool}
+\usepackage[acronym,nomain,toc,nonumberlist]{glossaries}
 \usepackage[numbered,framed,final]{matlab-prettifier}
 \usepackage{setspace}
 \usepackage[lofdepth,lotdepth]{subfig}
@@ -17,8 +18,32 @@
 \onehalfspacing
 
 % Generate the glossary
-\makeglossaries
+
+% fix the system to capitalize all first letters, not just the first
+\makeatletter
+\let\oldmakefirstuc\makefirstuc
+\renewcommand*{\makefirstuc}[1]{%
+  \def\gls@add@space{}%
+  \mfu@capitalisewords#1 \@nil\mfu@endcap
+}
+\def\mfu@capitalisewords#1 #2\mfu@endcap{%
+  \def\mfu@cap@first{#1}%
+  \def\mfu@cap@second{#2}%
+  \gls@add@space
+  \oldmakefirstuc{#1}%
+  \def\gls@add@space{ }%
+  \ifx\mfu@cap@second\@nnil
+    \let\next@mfu@cap\mfu@noop
+  \else
+    \let\next@mfu@cap\mfu@capitalisewords
+  \fi
+  \next@mfu@cap#2\mfu@endcap
+}
+\makeatother
+
 \input{meta/glossary}
+\makeglossaries
+
 
 
 

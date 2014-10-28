@@ -41,6 +41,8 @@ ARCHITECTURE rtl OF SRAM IS
 	SIGNAL RMODE: UNSIGNED( 1 DOWNTO 0); -- keep track of nibble to be received
 	-- Counter to wait for current transmission to finish before sending another
 	SIGNAL TWAIT: UNSIGNED(13 DOWNTO 0); -- Wait for 10 bits * 443 clocks = 4430
+	-- Counter to wait for 64 characters sent, then need to send a linefeed char
+	SIGNAL LFCNT: UNSIGNED( 5 DOWNTO 0) := (OTHERS => '1');
 
 BEGIN
 
@@ -58,6 +60,7 @@ BEGIN
 		IF (RST = '0') THEN
 			RMODE <= "11"; -- Start receive  at upper nibble first
 			TMODE <= "11"; -- Start transmit at upper nibble first
+			LFCNT <= (OTHERS => '1'); -- Reset linefeed count (2^6 = 64)
 			AOT(17 DOWNTO 16) <= "00"; -- Leave the 2 MSBs unchanged
 			AOT(15 DOWNTO 0)  <= (OTHERS => '0'); -- Reset memory address
 		-- Normal Operating Conditions
@@ -158,14 +161,23 @@ BEGIN
 				-- Update State
 				-- Special case first - might need to send linefeed character
 				-- override output if this is the case
-				IF TMODE = "11" THEN
+				IF (LFCNT = TO_UNSIGNED(0,6)) THEN
+					LFCNT <= TO_UNSIGNED(63,6); -- Reset line counter
+					DOT <= "00001010"; -- ASCII CODE for a linefeed (0A in HEX)
+					TMODE <= "11"; -- next nibble should be start of new data
+				-- First Nibble to be sent
+				ELSIF TMODE = "11" THEN
 					TMODE <= "10";
+					LFCNT <= LFCNT - TO_UNSIGNED(1,6);
 				ELSIF TMODE = "10" THEN
 					TMODE <= "01";
+					LFCNT <= LFCNT - TO_UNSIGNED(1,6);
 				ELSIF TMODE = "01" THEN
 					TMODE <= "00";
+					LFCNT <= LFCNT - TO_UNSIGNED(1,6);
 				ELSIF TMODE = "00" THEN
 					TMODE <= "11";
+					LFCNT <= LFCNT - TO_UNSIGNED(1,6);
 				END IF;
 			-- If character just sent is NOT last of 4 then more to transmit
 			ELSIF ((TMODE /= "11") AND (TPREV /= "00")) THEN

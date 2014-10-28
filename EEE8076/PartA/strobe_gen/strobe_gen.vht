@@ -1,40 +1,42 @@
-LIBRARY IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
 
-ENTITY strobe_gen_testbench IS
-END strobe_gen_testbench;
-ARCHITECTURE strobe_gen_arch OF strobe_gen_testbench IS
-  SIGNAL CLK, Reset, Strobe : STD_LOGIC;
-  COMPONENT strobe_gen
-    PORT (
-      CLK    : IN  STD_LOGIC;
-      Reset  : IN  STD_LOGIC;
-      Strobe : OUT STD_LOGIC
+entity strobe_gen_tb is
+end strobe_gen_tb;
+
+architecture tb of strobe_gen_tb is
+  signal CLK, RST, STR : std_logic;
+  component strobe_gen
+    port (
+      CLK : in  std_logic;
+      RST : in  std_logic;
+      STR : out std_logic
     );
-  END COMPONENT;
-BEGIN
-  testcomp : strobe_gen PORT MAP (CLK, Reset, Strobe);
-  testinputs : PROCESS
-  BEGIN
-    Reset <= '1';      -- No Strobing
-    WAIT FOR 200 ns;
-    Reset <= '0';      -- Should see strobe start strobing
-    WAIT FOR 1000 ns;
-    Reset <= '1';      -- No Strobing for a longish time
-    WAIT FOR 1000 ns;
-    Reset <= '0';      -- Should see strobe start strobing again
-    WAIT;
-  END PROCESS testinputs;
--- Stop simulation after fixed number of cycles
--- clock period = 20 ns (50Mz frequency req. period of 1/50,0000,0000s = 20ns)
-  clock : PROCESS
-  BEGIN
-    FOR clksteps IN 0 TO 100 LOOP
+  end component;
+begin
+  duu : strobe_gen port map (CLK, RST, STR);
+
+  clk_proc: process
+  begin
+    for I in 0 to 100 loop
       CLK <= '0';
-      WAIT FOR 10 ns;
-      CLK <= NOT CLK;
-      WAIT FOR 10 ns;
-    END LOOP; 
-    WAIT;
-  END PROCESS clock;
-END strobe_gen_arch;
+      wait for 10 ns;
+      CLK <= not(CLK);
+      wait for 10 ns;
+    end loop;
+    wait;
+  end process clk_proc;
+
+  test_proc: process
+  begin
+    RST <= '1'; -- No strobing
+    wait for 200 ns;
+    RST <= '0'; -- Should see strobe start strobing
+    wait for 1000 ns;
+    RST <= '1'; -- No strobing for a relatively long time
+    wait for 1000 ns;
+    RST <= '0'; -- Should see strobe start strobing again
+    wait;
+  end process test_proc;
+
+end tb;

@@ -1,10 +1,95 @@
 % Chapter 5
 
-\chapter{Conclusion} % Chapter title
+\chapter{Conclusions} % Chapter title
+\label{ch:conclusion} % For referencing the chapter elsewhere, use \autoref{ch:conclusionn}
 
-\label{ch:conclusion} % For referencing the chapter elsewhere, use \autoref{ch:conclusionn} 
-
-%TC:ignore
-This is the conclusion chapter, it should be approximately 750 Words
-%TC:endignore
 %-------------------------------------------------------------------------------
+
+\section{Achievements}
+
+\subsection{Goals Met}
+
+In the time alloted a functioning prototype of an achievable \gls{puf}-based
+network authentication system has been achieved. A working example of a
+\gls{puf} was created. Its potential for use in cryptographically secure
+applications was fulfilled through encapsulating it with a fuzzy extractor.
+A novel approach for harnessing the properties of a secure \gls{puf} was
+demonstrated through wedding it to an extension of an existing authentication
+framework. Most importantly, the potential for a real, practical solution to the problem of
+automating embedded device authentication at the data-link layer has been shown,
+and a path to its realisation has been marked out.
+
+In learning terms, this project has surpassed expectations. It has exposed many
+topics of further interest and increased understanding of both many technical areas
+and of good design approaches to be used in future projects. A greater
+familiarity of the use of \matlab, \gls{fpga} synthesis using HDLs, \LaTeX and other tools
+has been fostered. Technical and theoretical experience with communication
+protocols (both RS-232 and Ethernet), cryptographic hash functions,
+error correction \& detection codes, \gls{sram}, \glspl{rng}, \glspl{lfsr}, network security
+and other technologies has been gained. Gaining a fuller understanding of vital parts
+of the Academic research process; such as the best ways to find relevant academic
+papers, standards documentation and other literature has also come about through
+the process of completing this project.
+
+\subsection{Benefits of a Modular Approach}
+
+In tackling a novel, wide-ranging problem such as that underlying
+this project, the agile `Do the simplest thing that could possibly work first.'
+mantra espoused by experienced developers\cite{beck2000extreme} has been used
+in carrying out the work necessary.
+
+At the outset of this project, the ambitious goal of fully implementing a
+working \gls{fpga} implementation of an authentication solution utilising the unique
+properties of \glspl{puf} was provisionally set.
+In the initial design stages it became readily
+apparent that this was too ambitious a task and the project was sensibly scaled
+back to a semi-simulated, hybrid approach.
+This turned out to be a virtuous decision, as
+all the components required for a complete system could be investigated to a
+appropriate level given the time and experience constraints.
+This modular nature allows for incremental development towards the full design.
+This, in turn, allowed for changes to the specification as previous assumptions were found
+to be wrong. In contrast, if the decision had been taken to develop a fully
+functional design in one single effort the probability of restricting the ability
+to redesign when better solutions were found was dangerously high.
+This advantageous property can also serve as the basis for wide-ranging further
+research into the topics of \glspl{puf}, fuzzy extractors and authentication.
+
+\section{Limitations}
+
+While the project has met a satisfactory level of completion, there is much that
+is missing. Given time it would be preferable to have implemented more of the
+design in \gls{vhdl} rather than \matlab. While simulation is valuable, it leaves
+some potential issues unexplored. This is due to the lack of resource constraints
+that any real system would encounter. Without knowing the true bounds of a final
+implementation from the outset, none could be encountered when simulating
+parts of the system. This could jeopardize the ultimate feasibility of the solution
+delivered.
+Also, the exploration of the EAP-PUF
+protocol design could have been improved through use of Ethernet simulation
+tools which are available in \matlab through the Simulink platform. These were not
+used due to lack of training, confidence and familiarity with the software.
+
+\section{Implications}
+
+This project could be used as
+the basis from which a practical system could be made.
+One which, if turned into a reality, could have benefits
+the way in which embedded devices are used in the home or office. By removing
+the need for manually authenticating devices onto wireless networks in particular
+a potential barrier-to-entry to the future expansion of the `Internet-of-Things'
+could be removed. Once removed, inexpensive networked devices and sensors could
+become ubiquitous sooner and in greater quantity. Ultimately this could have
+wide-ranging benefits to society as a whole.
+
+\section{Future Research}
+
+While the objectives of the project were achieved, there is a great deal of scope
+for further work on this topic. All of the technologies and concepts encountered in
+this project could be explored in much greater depth. As the project covered so many
+areas it is difficult to think which would offer the greatest research
+potential. While active research is still focused on the properties
+of \glspl{puf}, the level of research into their applications is very much less
+intense.
+There is virgin research territory to explore in the current gap between
+\gls{puf} devices and the security of electronic networks.
